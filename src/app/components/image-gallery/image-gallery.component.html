@@ -1,0 +1,28 @@
+<section class="image_gallery">
+    <img class="selected_image" [src]="selectedImage" (click)="openLightbox()" alt="">
+    <div class="images_thumbnails">
+        <div class="images_thumbnails_container"
+            *ngFor="let image of imagesThumbnails; let i = index"
+            [class.selected]="image.replace('-thumbnail', '') === selectedImage"
+        >
+            <img
+                (click)="handleSelectedImage(image, i)"
+                [src]="image"
+                alt=""
+            >
+        </div>
+    </div>
+</section>
+<section class="image_gallery_mobile">
+    <button class="prev_btn" (click)="handleMobileGallery(-1)">
+        <svg width="12" height="18" xmlns="http://www.w3.org/2000/svg"><path d="M11 1 3 9l8 8" stroke="#1D2026" stroke-width="3" fill="none" fill-rule="evenodd"/></svg>
+    </button>
+    <img class="selected_image" [src]="selectedImage" alt="">
+    <button class="next_btn" (click)="handleMobileGallery(1)">
+        <svg width="13" height="18" xmlns="http://www.w3.org/2000/svg"><path d="m2 1 8 8-8 8" stroke="#1D2026" stroke-width="3" fill="none" fill-rule="evenodd"/></svg>
+    </button>
+</section>
+<app-lightbox-gallery
+    *ngIf="ifLightboxActive"
+    (onCloseLightbox)="closeLightbox($event)"
+></app-lightbox-gallery>

@@ -1,0 +1,21 @@
+.product_section {
+    padding: 5.625rem 12.0625rem 8.25rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7.8125rem;
+}
+
+@media(max-width: 1125px) {
+    .product_section {
+        flex-direction: column;
+        padding: 4.375rem 2.5rem 8.25rem;
+    }
+}
+
+@media(max-width: 680px) {
+    .product_section {
+        padding: 0;
+        gap: .9375rem;
+    }
+}

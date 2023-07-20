@@ -1,27 +1,33 @@
-# EcommerceProductPage
+# E-commerce Product Page | solution to the Frontend Mentor challenge
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.7.
+This is a solution to the [E-commerce product page challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/ecommerce-product-page-UPsZ9MJp6). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
 
-## Development server
+## Screenshot
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+![](/src/assets/screenshot/screenshot.png)
 
-## Code scaffolding
+## Links
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+- Live Site URL (I use Netlify for websites hosting) ⇒ https://ecommerce-product-page-km9.netlify.app
 
-## Build
+## Features
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+- Lighbox gallery - Click on the large photo to open the gallery (there is no lightbox gallery in the mobile version (below 680px wide))
+- Adding items to the cart - Select the quantity of products using the +/- buttons or entering the value directly into the field, then click the "Add to cart" button (minimum value: 1, maximum value: 100)
+- Displaying the contents of the cart - click on the cart icon to see items. You can also remove items in it by clicking on the garbage can can icon on the right
 
-## Running unit tests
+## Built With
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+- HTML5
+- SCSS
+- TypeScript
+- Angular
 
-## Running end-to-end tests
+## Author
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+Check out my profiles on other platforms:
 
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+- Frontend Mentor ⇒ https://www.frontendmentor.io/profile/k-malkiewicz
+- Codewars ⇒ https://www.codewars.com/users/k_malkiewicz
+- iCodeThis ⇒ https://icodethis.com/BAGI3TA
+- freeCodeCamp ⇒ https://www.freecodecamp.org/kamil_malkiewicz

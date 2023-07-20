@@ -1,0 +1,93 @@
+@import '../../../variables';
+
+.image_gallery {
+    width: 27.8125rem;
+    &_mobile {
+        display: none;
+        width: 100vw;
+        height: 18.75rem;
+        position: relative;
+        .prev_btn,
+        .next_btn {
+            width: 2.5rem;
+            height: 2.5rem;
+            background: hsl(0, 0%, 100%);
+            border-radius: 50%;
+            display: grid;
+            place-content: center;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            svg {
+                scale: .75;
+            }
+        }
+        .prev_btn {
+            left: 1rem;
+        }
+        .next_btn {
+            right: 1rem;
+        }
+    }
+    img {
+        cursor: pointer;
+    }
+    .selected_image {
+        width: 100%;
+        border-radius: .9375rem;
+    }
+    .images_thumbnails {
+        margin: 1.75rem 0 0;
+        display: flex;
+        justify-content: space-between;
+        &_container {
+            width: 5.5rem;
+            height: 5.5rem;
+            border-radius: .5rem;
+            transition: opacity .5s;
+            position: relative;
+            img {
+                display: block;
+                width: 100%;
+                border-radius: .5rem;
+                transition: opacity .5s;
+            }
+            &.selected::before {
+                content: '';
+                width: 5.5rem;
+                height: 5.5rem;
+                border-radius: .5rem;
+                border: .125rem solid $color-third;
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                opacity: 1;
+                pointer-events: none;
+                z-index: 1;
+            }
+            &.selected img {
+                opacity: .3;
+            }
+            &:hover img {
+                opacity: .5;
+            }
+        }
+    }
+}
+
+@media(max-width: 680px) {
+    .image_gallery {
+        display: none;
+        object-fit: cover;
+        &_mobile {
+            display: block;
+            .selected_image {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+}
